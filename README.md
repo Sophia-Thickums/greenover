@@ -78,6 +78,15 @@ The selftest is deliberately **non-vacuous**: it removes the rule each check exi
 and confirms the verdict **degrades to `UNKNOWN`** rather than passing. A green suite over a test
 that cannot fail is theatre; this one has been watched going red.
 
+## Findings: the standard patterns are green over nothing
+
+Run `python3 audit_reference_pipelines.py` to audit the reference pipeline shapes that ship in
+tutorials and quickstarts. On the five modelled here:
+
+**5 of 5 were green over nothing on at least one silent-failure class.** The two classes *no*
+scaffold catches are device residency and the monitor's own liveness — because those need a
+sensor the pipeline does not have, not a smarter check. See `audit_reference_pipelines.py`.
+
 ## Prior art, and how this differs
 
 The adjacent work is real and worth naming, because a tool that pretends to be the first is a
