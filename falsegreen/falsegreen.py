@@ -67,6 +67,26 @@ class Finding:
     monitor_said: str
     truth: str
     detail: str = ""
+    signal_gap: str = "unknown"   # existed_and_ignored | never_instrumented | unknown
+
+
+# Whether the signal that would have caught each failure was ALREADY available to the
+# pipeline, or whether the pipeline never collected it. The distinction is the difference
+# between a script and an auditor: a detection gap is a bug in the check, an instrumentation
+# gap is a missing sensor, and they have different fixes and different owners.
+INJECTION_SIGNAL: Dict[Injection, str] = {
+    # the response body itself carried the answer; the monitor simply did not read it.
+    Injection.EMPTY_OUTPUT: "existed_and_ignored",
+    # finish_reason == 'length' was in the response; the monitor read only 'success'.
+    Injection.TRUNCATED: "existed_and_ignored",
+    # the token budget field told the story; nobody checked output-vs-budget.
+    Injection.BUDGET_EXHAUSTED: "existed_and_ignored",
+    # device placement cannot be inferred from the response; the pipeline holds no such
+    # sensor unless it asks the platform. This one needs instrumentation before it can fire.
+    Injection.CPU_FALLBACK: "never_instrumented",
+    # the monitor's own liveness is the signal, and it is absent by construction.
+    Injection.CHECK_NOT_RUN: "never_instrumented",
+}
 
 
 @dataclass
@@ -87,9 +107,13 @@ class AuditReport:
         if bad:
             lines.append("")
             lines.append("> A green light over a room the monitor was never observing is worse than no monitor at all.")
-        lines += ["", "| injected failure | monitor reported | truth | verdict |", "|---|---|---|---|"]
+        lines += ["", "| injected failure | monitor reported | truth | verdict | why it fired / did not |", "|---|---|---|---|---|"]
+        GAP = {"existed_and_ignored": "signal existed, was ignored",
+               "never_instrumented": "signal never instrumented",
+               "unknown": "unknown"}
         for f in self.findings:
-            lines.append(f"| {f.injection.value} | {f.monitor_said} | {f.truth} | **{f.verdict.value}** |")
+            lines.append(f"| {f.injection.value} | {f.monitor_said} | {f.truth} "
+                         f"| **{f.verdict.value}** | {GAP.get(f.signal_gap, f.signal_gap)} |")
         lines.append("")
         return "\n".join(lines)
 
@@ -199,7 +223,7 @@ def audit(pipeline: Pipeline, injections: Optional[List[Injection]] = None,
             else:
                 v = Verdict.REAL
             rep.findings.append(Finding(inj, v, status, _truth_of(inj),
-                                        m.get("detail", "")))
+                                        m.get("detail", ""), INJECTION_SIGNAL.get(inj, "unknown")))
             continue
 
         # Run the pipeline with the failure injected (via a probe seam when supplied).
@@ -217,7 +241,8 @@ def audit(pipeline: Pipeline, injections: Optional[List[Injection]] = None,
             v = Verdict.UNKNOWN
         else:
             v = Verdict.REAL
-        rep.findings.append(Finding(inj, v, status, _truth_of(inj), m.get("detail", "")))
+        rep.findings.append(Finding(inj, v, status, _truth_of(inj), m.get("detail", ""),
+                                    INJECTION_SIGNAL.get(inj, "unknown")))
     return rep
 
 
