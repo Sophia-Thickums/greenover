@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# False Green run artifacts
+*.falsegreen.json
+falsegreen-report.*
