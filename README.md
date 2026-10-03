@@ -23,6 +23,12 @@ python3 -m falsegreen --demo       # audits two example pipelines and prints the
 
 That is the whole barrier to entry. No arguments, no config, no model, no hardware.
 
+## Live demo
+
+- **Hosted demo:** https://sophia-thickums.github.io/greenover/
+- **Run it locally with a web UI:** `python3 demo_server.py` → http://127.0.0.1:8099
+  (standard library only; shows a live audit and the live AMD residency read)
+
 ## What it injects
 
 Each injection is a real failure class, not a synthetic assertion:
