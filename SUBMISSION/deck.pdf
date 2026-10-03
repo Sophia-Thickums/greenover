@@ -1,0 +1,167 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 9 /Kids [5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 720 405] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 14 0 R >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 720 405] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 720 405] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 16 0 R >>
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 720 405] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 17 0 R >>
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 720 405] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 18 0 R >>
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 720 405] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 19 0 R >>
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 720 405] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 20 0 R >>
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 720 405] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 21 0 R >>
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 720 405] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 22 0 R >>
+endobj
+14 0 obj
+<< /Length 355 >>
+stream
+q 0.043 0.055 0.075 rg 0 0 720 405 re f Q
+BT /F2 26 Tf 1 1 1 rg 48 315 Td (TITLE) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 265 Td (False Green ? Does your monitoring actually monitor?) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 243 Td (Chaos engineering for AI pipelines · ROCm-aware) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 221 Td (Sophia Marie DeClue) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Length 417 >>
+stream
+q 0.043 0.055 0.075 rg 0 0 720 405 re f Q
+BT /F2 26 Tf 1 1 1 rg 48 315 Td (THE HOOK) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 265 Td ("This health check says everything is fine.") Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 243 Td (Show a green status. Then: it has been returning empty responses for two minutes.) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 221 Td (Nothing errored. It reported success the whole time.) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Length 505 >>
+stream
+q 0.043 0.055 0.075 rg 0 0 720 405 re f Q
+BT /F2 26 Tf 1 1 1 rg 48 315 Td (THE PROBLEM) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 265 Td (Every pipeline is monitored; almost none of the checks can express the failure they exist to catch.) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 243 Td (`all clear` means two different things: "no problems found" and "I could not look.") Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 221 Td (A check that passes while the thing it guards is absent manufactures confidence.) Tj ET
+endstream
+endobj
+17 0 obj
+<< /Length 686 >>
+stream
+q 0.043 0.055 0.075 rg 0 0 720 405 re f Q
+BT /F2 26 Tf 1 1 1 rg 48 315 Td (THE FAILURES \(this is real, not hypothetical\)) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 265 Td (Silent CPU fallback ? dashboard green, work 20?40× slower) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 243 Td (Empty output ? a guard turns "no data" into a clean `0.000`) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 221 Td (Budget exhausted in a hidden reasoning channel ? a result over no data) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 199 Td (The monitor never fires ? "zero problems" and "couldn't look" share one output) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 177 Td (Truncation at the cap ? reported as success) Tj ET
+endstream
+endobj
+18 0 obj
+<< /Length 436 >>
+stream
+q 0.043 0.055 0.075 rg 0 0 720 405 re f Q
+BT /F2 26 Tf 1 1 1 rg 48 315 Td (WHAT FALSE GREEN IS) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 265 Td (Chaos engineering aimed at the monitoring itself ? not telemetry analysis.) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 243 Td (It injects the failures and asks whether your check would have fired.) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 221 Td (A smoke detector tests the smoke detector.) Tj ET
+endstream
+endobj
+19 0 obj
+<< /Length 400 >>
+stream
+q 0.043 0.055 0.075 rg 0 0 720 405 re f Q
+BT /F2 26 Tf 1 1 1 rg 48 315 Td (THE VERDICTS) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 265 Td (REAL ? the monitor caught the injected failure) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 243 Td (GREEN_OVER_NOTHING ? it reported healthy while the failure was live) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 221 Td (UNKNOWN ? could not be judged ? never green) Tj ET
+endstream
+endobj
+20 0 obj
+<< /Length 389 >>
+stream
+q 0.043 0.055 0.075 rg 0 0 720 405 re f Q
+BT /F2 26 Tf 1 1 1 rg 48 315 Td (THE DEMO \(screenshot\)) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 265 Td (The naive monitor: 5 green-over-nothing) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 243 Td (The honest monitor: 5 real) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 221 Td (AMD residency panel: four devices, pinned by PCI bus, failing closed.) Tj ET
+endstream
+endobj
+21 0 obj
+<< /Length 746 >>
+stream
+q 0.043 0.055 0.075 rg 0 0 720 405 re f Q
+BT /F2 26 Tf 1 1 1 rg 48 315 Td (TECH ? why the AMD stack is load-bearing) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 265 Td (ROCm residency read live \(`rocm-smi`; the residency signal is the instrument, not a badge\)) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 243 Td (Pins by PCI bus, never by index; fails closed to UNKNOWN) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 221 Td (Runs against a live Ollama-on-ROCm pipeline; deployable to AMD Developer Cloud unchanged) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 199 Td (Non-vacuous selftest: remove a rule ? the verdict degrades to UNKNOWN, never passes) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 177 Td (Pure Python stdlib core · MIT · one command, no install) Tj ET
+endstream
+endobj
+22 0 obj
+<< /Length 800 >>
+stream
+q 0.043 0.055 0.075 rg 0 0 720 405 re f Q
+BT /F2 26 Tf 1 1 1 rg 48 315 Td (VALUE + CLOSE) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 265 Td (Every team running inference at scale ships at least one of these green-over-nothing checks and does not know ) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 243 Td (Converts an invisible cost \(wasted GPU-hours, corrupt metrics\) into a per-check verdict.) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 221 Td (`python3 -m falsegreen --selftest`) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 199 Td (Your pipeline says everything is fine. False Green checks whether it actually looked.) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 177 Td (Repo: github.com/Sophia-Thickums/greenover · Demo: sophia-thickums.github.io/greenover) Tj ET
+BT /F1 12 Tf 0.75 0.78 0.82 rg 48 155 Td () Tj ET
+endstream
+endobj
+xref
+0 23
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000167 00000 n 
+0000000237 00000 n 
+0000000312 00000 n 
+0000000449 00000 n 
+0000000586 00000 n 
+0000000723 00000 n 
+0000000860 00000 n 
+0000000997 00000 n 
+0000001135 00000 n 
+0000001273 00000 n 
+0000001411 00000 n 
+0000001549 00000 n 
+0000001956 00000 n 
+0000002425 00000 n 
+0000002982 00000 n 
+0000003720 00000 n 
+0000004208 00000 n 
+0000004660 00000 n 
+0000005101 00000 n 
+0000005899 00000 n 
+trailer
+<< /Size 23 /Root 1 0 R >>
+startxref
+6751
+%%EOF
