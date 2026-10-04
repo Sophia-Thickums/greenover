@@ -116,6 +116,12 @@ claims to. The two compose.
 - The residency sensor covers AMD ROCm via `rocm-smi`. On a host without it, residency is
   `UNKNOWN`, and `UNKNOWN` is not green.
 
+## Real incidents
+
+`INCIDENTS.md` cites the primary sources: a vLLM production case where `/health` kept returning
+200 while the engine deadlocked and *"every in-flight request hangs forever"* (issue #45094,
+PR #45097). Real, public, dated — not a hypothetical.
+
 ## Why this exists
 
 The primary obstacle to honest claims about AI systems is not capability. It is **measurement** —
