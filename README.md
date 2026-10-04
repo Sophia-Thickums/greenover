@@ -15,8 +15,8 @@ own health signal to see whether it noticed. Every check gets one of three verdi
 ## Quick start (zero setup, no GPU, no network)
 
 ```bash
-git clone https://github.com/Sophia-Thickums/falsegreen
-cd falsegreen
+git clone https://github.com/Sophia-Thickums/greenover
+cd greenover
 python3 -m falsegreen --selftest   # proves each rule can go RED, and the control stays GREEN
 python3 -m falsegreen --demo       # audits two example pipelines and prints the report
 ```
